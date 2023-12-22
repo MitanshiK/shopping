@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yellow2"
+    tools:context=".homepage">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/logo"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Shop"
+                    android:textColor="#E38A08"
+                    android:textSize="30dp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@id/logo"
+                    app:layout_constraintLeft_toRightOf="@id/logo"
+                    app:layout_constraintTop_toTopOf="@id/logo" />
+                <SearchView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search"
+                    app:layout_constraintLeft_toRightOf="@id/banner"
+                    app:layout_constraintTop_toTopOf="@id/banner"
+                    app:layout_constraintBottom_toBottomOf="@id/banner"
+                   android:background="@color/white"
+                    app:layout_constraintRight_toLeftOf="@id/login"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/login"
+                    android:text="Login"
+                    app:layout_constraintTop_toTopOf="@id/logo"
+                   app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="#FF9800"
+                    android:backgroundTint="#000000"
+                    android:layout_marginRight="16dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="150dp"
+                android:background="@drawable/layoutcorners"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="@id/nav"
+                app:layout_constraintRight_toRightOf="@+id/nav"
+                app:layout_constraintTop_toBottomOf="@id/nav">
+
+                <TextView
+                    android:id="@+id/catogary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Categories"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/scrollView2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/catogary">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/CatLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintLeft_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/catogary">
+
+                        <LinearLayout
+                            android:id="@+id/trophy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:src="@drawable/trophy"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/trophytext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="        RANK"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/trophy"
+                                app:layout_constraintRight_toRightOf="@id/trophy"
+                                app:layout_constraintTop_toBottomOf="@id/trophy" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fire"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/trophy"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/fire"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/firetext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="HOT"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/fire"
+                                app:layout_constraintLeft_toRightOf="@id/trophytext"
+                                app:layout_constraintRight_toRightOf="@id/fire"
+                                app:layout_constraintTop_toBottomOf="@id/fire" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/heart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/fire"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/heart"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/hearttext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LOVED"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/heart"
+                                app:layout_constraintLeft_toRightOf="@id/firetext"
+                                app:layout_constraintRight_toRightOf="@id/heart"
+                                app:layout_constraintTop_toBottomOf="@id/heart" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/secret"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/heart"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/secret"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/heart"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/secrettext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SECRET"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/secret"
+                                app:layout_constraintLeft_toRightOf="@id/hearttext"
+                                app:layout_constraintRight_toRightOf="@id/secret"
+                                app:layout_constraintTop_toBottomOf="@id/secret" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/book"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/secret"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/book"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/heart"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/booktext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SECRET"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/secret"
+                                app:layout_constraintLeft_toRightOf="@id/hearttext"
+                                app:layout_constraintRight_toRightOf="@id/secret"
+                                app:layout_constraintTop_toBottomOf="@id/secret" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/skinType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingTop="40dp"
+                    android:text="Skin Type"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scrollView2" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/skinType">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/skinlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintLeft_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/skinType">
+
+                        <LinearLayout
+                            android:id="@+id/normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/normali"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/normal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/nortext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NORMAL"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/normali"
+                                app:layout_constraintLeft_toRightOf="@id/trophytext"
+                                app:layout_constraintRight_toRightOf="@id/normali"
+                                app:layout_constraintTop_toBottomOf="@id/normali" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/dry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/normal"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/dry"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/drytext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DRY"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/fire"
+                                app:layout_constraintLeft_toRightOf="@id/trophytext"
+                                app:layout_constraintRight_toRightOf="@id/fire"
+                                app:layout_constraintTop_toBottomOf="@id/fire" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/oily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/dry"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/oily"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/oilytext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="OILY"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/heart"
+                                app:layout_constraintLeft_toRightOf="@id/firetext"
+                                app:layout_constraintRight_toRightOf="@id/heart"
+                                app:layout_constraintTop_toBottomOf="@id/heart" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/combine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/oily"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/combine"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/combinetext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="COMBINE"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/heart"
+                                app:layout_constraintLeft_toRightOf="@id/firetext"
+                                app:layout_constraintRight_toRightOf="@id/heart"
+                                app:layout_constraintTop_toBottomOf="@id/heart" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/senstive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/combine"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/senstive"
+                                app:layout_constraintBottom_toBottomOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/senstivetext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="SENSTIVE"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@id/heart"
+                                app:layout_constraintLeft_toRightOf="@id/firetext"
+                                app:layout_constraintRight_toRightOf="@id/heart"
+                                app:layout_constraintTop_toBottomOf="@id/heart" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/postwhole1"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_margin="20dp"
+                    android:background="#EAE6E6"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scrollView3">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/post_heading1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/icon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/per1"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mitanshi"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/icon"
+                            app:layout_constraintLeft_toRightOf="@id/icon"
+                            app:layout_constraintTop_toTopOf="@id/icon" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:src="@drawable/product1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/post_heading1"
+
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/postwhole2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="#EAE6E6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postwhole1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/post_heading2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/icon2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/per2"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nidhi"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/icon2"
+                            app:layout_constraintLeft_toRightOf="@id/icon2"
+                            app:layout_constraintTop_toTopOf="@id/icon2" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/post2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="This company makes very good and affordable products."
+                        android:textSize="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/post_heading2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/postwhole3"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_margin="20dp"
+                    android:background="#EAE6E6"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postwhole2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/post_heading3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/icon5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/per1"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mitanshi"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/icon5"
+                            app:layout_constraintLeft_toRightOf="@id/icon5"
+                            app:layout_constraintTop_toTopOf="@id/icon5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/imagesAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="@id/post_heading3"
+                        app:layout_constraintTop_toBottomOf="@id/post_heading3">
+
+                        <ImageView
+                            android:id="@+id/i1"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="20dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/product1"
+                            app:layout_constraintTop_toBottomOf="@id/post_heading3" />
+
+                        <LinearLayout
+                            android:id="@+id/images"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@id/post_heading3">
+
+                            <ImageView
+                                android:id="@+id/i2"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/product4"
+                                android:layout_margin="10dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/i1"
+                                app:layout_constraintTop_toBottomOf="@id/post_heading3" />
+
+                            <ImageView
+                                android:id="@+id/i3"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/product5"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/i1"
+                                app:layout_constraintTop_toBottomOf="@id/i2" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/Featured"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Featured products"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/postwhole3" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollVieww4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Featured">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/FeatureLayo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintLeft_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/Featured">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/wholefeat1"
+                            android:layout_width="350dp"
+                            android:layout_height="400dp"
+                            android:layout_margin="20dp"
+                            android:background="#EAE6E6"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toTopOf="@+id/scrollVieww4"
+                            app:layout_constraintLeft_toLeftOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/featured1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+
+                                android:orientation="horizontal"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/icon3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/per1"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mitanshi"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="@id/icon3"
+                                    app:layout_constraintLeft_toRightOf="@id/icon3"
+                                    app:layout_constraintTop_toTopOf="@id/icon3" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:src="@drawable/product2"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/featured1"
+
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/wholefeat2"
+                            android:layout_width="350dp"
+                            android:layout_height="400dp"
+                            android:layout_margin="20dp"
+                            android:background="#EAE6E6"
+                            android:orientation="vertical"
+                            app:layout_constraintLeft_toRightOf="@id/wholefeat1">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/featured2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/icon4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/per2"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anshika"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="@id/icon4"
+                                    app:layout_constraintLeft_toRightOf="@id/icon4"
+                                    app:layout_constraintTop_toTopOf="@id/icon4" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:src="@drawable/product3"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/featured2"
+
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
